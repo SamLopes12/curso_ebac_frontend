@@ -1,0 +1,146 @@
+          /* TODAS AS EXPLICACOES SOBRE CADA TOPICO, CADA ANOTACAO ESTARA CONTIDA NA AULA SOBRE O TEMA, AQUI SERA SOMENTE O CODIGO LIMPO UTILIZADO PARA MODIFICAR O SITE */
+
+
+
+
+/* ---------------------------------------------- Ajustando os pixels do site e delimitando e alinhando utilizando o box sizing ---------------------------------------------------------- */
+
+* { /* O professor disse que, por organizacao, ele prefere essa parte do box sizindo no comeco do codigo */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------- Aqui vamos agora mexer no Cabecalho, no caso, em tudo relacionado a cor, comecando pela cor de fundo do mesmo --------------------------- */
+
+body > header {
+    background-color: #2f3640; 
+    padding: 16px 0;
+    color: aliceblue; 
+}
+
+header .container {
+    display: flex; /* Aqui estamos pegando tudo que esta dentro do container que nomeamos "container" dentro da tag header, e ajustando lado a lado. */
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li a {
+    color: aliceblue; /* Mudando a cor dos links do cabecalho do site */
+    text-decoration: none; /* Retirando o underline dos botoes do cabecalho */
+}
+
+header li a:hover {
+    text-decoration: underline; /* Colocando animacao nos botoes "Esportes" e "Economia" do cabecalho */
+}
+
+/* ---------------------------------------------- Centralizando os itens do site, comecamos com o cabecalho porem depois centralizados todo o conteudo ----------------------------------- */
+
+header li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif; /* Mudando a fonte dos botoes do cabecalho */
+    font-weight: bold; /* Colocando os botoes em negrito */
+    margin-left: 16px; /* Colocando margem entre eles */
+}
+
+.container { /* Vai estar o site inteiro centralizado porque o professor quis alterar todo o codigo HTML, inserindo as secoes dentro da "div" chamada container */
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap; /* Aqui, conforme o nome diz, nos enrolamos os artigos, colocamos baixo que cada artigo equivale a 30% entao quando atingir 100% vai jogar o item para a linha debaixo */
+    justify-content: space-between; /* distruindo de forma igualitaria os 10% que sobram da tela entra os artigos */
+}
+
+/* ---------------------------------------------- Ajustando o tamanho das imagens (artigos) do site -------------------------------------------------------------------------------------- */
+
+.articles article img {
+     height: 280px; /* Delimitando o tamanho das imagens em 180px */
+    width: 100%;
+}
+
+/* ---------------------------------------------- Delimitando qual a quantidade maxima de imagens que vamos ter por linha ---------------------------------------------------------------- */
+
+.articles article {
+    width: 30%;
+}
+
+/* ---------------------------------------------- Aqui vamos colocar espacamento nos intens do site ------------------------------------------------------------------------------------- */
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+section p,
+section h3,
+.articles article a {
+    margin-top: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: #FFF;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none; /* Removendo o underline do botao "Ler Mais" */
+    font-weight: bold; /* Colocando o texto do botao "ler mais" em negrito */
+    margin-top: 8px; /* Colocando margem na parte de cima do botao */
+}
+
+.articles article a:hover { 
+    text-decoration: underline; /* Aqui Estamos colocando um efeito para quando passar o mouse em cima do botao, nesse caso, quando passarmos o mouse encima do botao, vai aparecer uma animacao de underline */
+}
+
+/* ----------------- Alterando a fonte, tamanho, etc. Dos textos do Site ------------- */
+
+.articles article p,
+.articles article a { /* Alterando a fonte */
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px; 
+}
+
+#sports {
+    background-color: rgba(0, 255, 0, 0.1); /* Muda a cor da secao de esportes inteira, olar no site!!!! */
+}
+
+#sports .articles article a {
+    background-color: #009432; /* Mudando a cor dos botoes da secao de Esportes no site */
+}
+
+#economy {
+    background-color: #f8f59f;
+}
+
+#economy .articles article a {
+    background-color: #ff9f1a;
+}
+
+#culture {
+    background-color: rgba(162, 0, 255, 0.26);
+}
+
+#culture .articles article a {
+    background-color: rgb(140, 29, 243);
+}
+
+#tecnology {
+    background-color: rgba(0, 238, 255, 0.329);
+}
+
+#tecnology .articles article a {
+    background-color: rgb(20, 130, 255);
+}
